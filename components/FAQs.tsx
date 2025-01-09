@@ -7,12 +7,11 @@ import { motion } from "framer-motion";
 import './faq.css';
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAnswer = (index) => {
+  // const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const toggleAnswer = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
   const faqData = [
     { question: "What is HackQuinox?", answer: "HackQuinox is a 24-hour hackathon where participants collaborate to create innovative solutions to real-world problems." },
     { question: "Who can participate in HackQuinox?", answer: "HackQuinox is open to students, professionals, and enthusiasts of all skill levels." },
