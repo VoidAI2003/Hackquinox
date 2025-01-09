@@ -1,20 +1,16 @@
+// Faq.tsx
 "use client";
 import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
-import './faq.css'; // Import the CSS file here
+import './faq.css';
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [isPlus, setIsPlus] = useState(true); // State for plus/minus toggle
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleAnswer = (index: number) => {
+  const toggleAnswer = (index) => {
     setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const toggleIcon = () => {
-    setIsPlus(!isPlus); // Toggle between plus and minus
   };
 
   const faqData = [
@@ -35,12 +31,19 @@ export default function Faq() {
     { question: "Where is the event taking place?", answer: "The event will be held at [Event Venue]. Detailed location will be provided upon registration." },
   ];
 
+  const contactInfo = [
+    { href: "mailto:example@gmail.com", icon: Mail, label: "example@gmail.com" },
+    { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
+    { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
+    { href: "https://discord.com/users/username", icon: FaDiscord, label: "@username" },
+  ];
+
   return (
-    <div className="faq-background">
-      <div className="faq-container p-8 rounded-xl mt-12 mb-4 mx-auto 5 bg-clip-border  p-4 rounded-lg">
+    <div className="faq-background min-h-screen w-full px-4 sm:px-6 lg:px-8">
+      <div className="faq-container max-w-7xl mx-auto py-8 sm:py-12">
         {/* FAQ Section */}
-        <div className="w-full max-w-5xl bg-black bg-opacity-0 p-8 rounded-xl border border-pink-500/20 mt-24 mx-auto">
-          <div className={`space-y-4 text-red-500`} style={{ fontFamily: 'var(--font-exo2)' }}>
+        <div className="w-full bg-black/0 rounded-xl border border-pink-500/20 mt-12 sm:mt-24 p-4 sm:p-8">
+          <div className="space-y-4 text-red-500" style={{ fontFamily: 'var(--font-exo2)' }}>
             {faqData.map((faq, index) => (
               <motion.div
                 key={index}
@@ -49,22 +52,19 @@ export default function Faq() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
-                <div className="flex justify-between items-center">
-                  <span className="text-4xl">{faq.question}</span>
+                <div className="flex justify-between items-center gap-4">
+                  <span className="text-lg sm:text-2xl lg:text-4xl">{faq.question}</span>
                   <button
                     onClick={() => toggleAnswer(index)}
-                    className="border-pink-500 hover:text-pink-400 transition-colors group"
+                    className="shrink-0 border-pink-500 hover:text-pink-400 transition-colors group"
                   >
                     <svg
-                      className="w-10 h-10 stroke-pink-800 group-hover:stroke-pink-400 group-active:stroke-pink-300 duration-300"
+                      className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 stroke-pink-800 group-hover:stroke-pink-400"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="none"
                     >
-                      <path
-                        strokeWidth="1.5"
-                        d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                      ></path>
+                      <path strokeWidth="1.5" d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"></path>
                       <path strokeWidth="1.5" d="M8 12H16"></path>
                       <path strokeWidth="1.5" d="M12 16V8"></path>
                     </svg>
@@ -73,7 +73,7 @@ export default function Faq() {
                 <hr className="my-4 border-t-2 border-pink-500" />
                 {openIndex === index && (
                   <motion.p
-                    className="mt-4 text-xl"
+                    className="mt-4 text-base sm:text-lg lg:text-xl"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
@@ -87,16 +87,14 @@ export default function Faq() {
         </div>
 
         {/* Contact Section */}
-        <div className="w-[800px] p-8 rounded-xl mt-12 mb-4 mx-auto border-4 bg-black/95 bg-clip-border border-pink-500 p-4 rounded-lg">
-          <h2
-            className={` text-4xl md:text-5xl text-white text-center mb-8`}
-            style={{ fontFamily: "var(--font-exo2)" }}
-          >
+        <div className="w-full max-w-4xl mx-auto p-4 sm:p-8 rounded-xl mt-8 sm:mt-12 border-4 bg-black/95 bg-clip-border border-pink-500">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-6 sm:mb-8" 
+              style={{ fontFamily: "var(--font-exo2)" }}>
             More Queries?
           </h2>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto"
+            className="flex flex-col sm:grid sm:grid-cols-4 gap-4 sm:gap-8"
             initial="hidden"
             animate="visible"
             variants={{
@@ -105,30 +103,24 @@ export default function Faq() {
             }}
             transition={{ duration: 0.5 }}
           >
-            {[
-              { href: "mailto:example@gmail.com", icon: Mail, label: "example@gmail.com" },
-              { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
-              { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
-              { href: "https://discord.com/users/username", icon: FaDiscord, label: "@username" },
-            ].map(({ href, icon: Icon, label }, idx) => (
+            {contactInfo.map(({ href, icon: Icon, label }, idx) => (
               <motion.a
                 key={idx}
                 href={href}
-                className="flex flex-col items-center gap-4 text-white hover:text-white transition-colors border-4 border-transparent p-4 rounded-lg bg-black/95 bg-clip-border"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="flex items-center sm:flex-col gap-4 sm:gap-4 text-white p-4 rounded-lg bg-black/95 bg-clip-border border-4 border-transparent"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <div className="Btn">
+                <div className="Btn w-10 h-10 sm:w-12 sm:h-12 shrink-0">
                   <div className="BG"></div>
                   <div className="svgContainer">
-                    <Icon className="w-12 h-12" />
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
                 </div>
-                <span className="text-white">{label}</span>
+                <span className="text-sm sm:text-base">{label}</span>
               </motion.a>
             ))}
           </motion.div>
-
         </div>
       </div>
     </div>
