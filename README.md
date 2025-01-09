@@ -98,10 +98,3 @@ The project uses the following dependencies:
 - `tailwindcss`: ^3.4.17
 - `typescript`: ^5.0
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-Enjoy building and contributing to the Hackquinox frontend! If you have any questions, feel free to open an issue or reach out.
