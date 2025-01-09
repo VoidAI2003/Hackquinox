@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
-import './faqs.module.css'; // Import the CSS file here
+import './faq.css'; // Import the CSS file here
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -29,9 +29,9 @@ export default function Faq() {
     { question: "Can I participate remotely?", answer: "HackQuinox is an in-person event; remote participation is not allowed." },
     { question: "How can I contact the organizing team?", answer: "You can reach out to us via email at support@hackquinox.com or through our social media channels." },
   ];
-  
 
   return (
+    <div className="faq-background">
     <div className="min-h-screen flex flex-col justify-between">
       {/* FAQ Section */}
       <div className="w-full max-w-5xl bg-black bg-opacity-0 p-8 rounded-xl border border-pink-500/20 mt-24 mx-auto">
@@ -48,7 +48,7 @@ export default function Faq() {
                 <span className="text-4xl">{faq.question}</span>
                 <button
                   onClick={() => toggleAnswer(index)}
-                  className="text-pink-500 hover:text-pink-400 transition-colors group"
+                  className="border-pink-500 hover:text-pink-400 transition-colors group"
                 >
                   <svg
                     className="w-10 h-10 stroke-pink-800 group-hover:stroke-pink-400 group-active:stroke-pink-300 duration-300"
@@ -72,7 +72,6 @@ export default function Faq() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  
                 >
                   {faq.answer}
                 </motion.p>
@@ -125,9 +124,9 @@ export default function Faq() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </div></div>
   );
 }
 
-/* Additional CSS for button animation */
+
 
