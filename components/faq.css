@@ -1,10 +1,9 @@
-/* faq.css */
 .faq-background {
   background-image: url('/faq_background.jpg'); /* Replace with the actual path */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image */
-  min-height: 100vh; /* Ensures the background covers the viewport height */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
 .Btn {
@@ -60,11 +59,140 @@
 }
 
 .group:hover {
-  transform: rotate(90deg); /* Rotate button on hover */
+  transform: rotate(90deg); 
   transition: transform 0.3s;
 }
 
 .group:active {
-  transform: rotate(0deg); /* Reset rotation on click */
+  transform: rotate(0deg); 
   transition: transform 0s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .faq-background {
+    background-size: cover;
+    padding: 0 10px; /* Add padding to ensure content doesn't touch edges */
+  }
+
+  .faq-container {
+    padding: 8px;
+  }
+
+  .faq-section {
+    padding: 8px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .faq-section .faq-item {
+    font-size: 1.2rem;
+  }
+
+  .Btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-container {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .w-800px {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 8px;
+  }
+  
+
+  .faq-item {
+    font-size: 1rem;
+  }
+
+  .faq-background {
+    min-height: auto;
+  }
+
+  .svgContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-container p {
+    font-size: 1rem;
+  }
+
+  .Btn svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .faq-section {
+    padding: 8px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .faq-container p {
+    font-size: 1rem;
+  }
+
+  .contact-section {
+    margin-top: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For extra small devices */
+@media (max-width: 480px) {
+  .faq-container {
+    padding: 5px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .faq-container .faq-item {
+    font-size: 1rem;
+  }
+
+  .Btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .Btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .faq-background {
+    min-height: auto;
+  }
+
+  .text-4xl {
+    font-size: 1.8rem;
+  }
+
+  .svgContainer {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-section {
+    margin-top: 15px;
+  }
 }
