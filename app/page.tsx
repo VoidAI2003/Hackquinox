@@ -39,7 +39,7 @@ export default function Home() {
         </div>
         <ScheduleCard />
       </section>
-      <section id="faq" className="py-11 mt-60">
+      <section id="faq" className="py-11 mt-80">
         <div
           className="relative inline-flex overflow-hidden rounded-xl ml-3 p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           onClick={scrollToFAQ}
