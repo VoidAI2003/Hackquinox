@@ -1,0 +1,77 @@
+/* Reset styles to ensure consistent layout */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default styling for cards */
+.card {
+  position: relative;
+  width: 500px; /* Increased width for better visibility */
+  height: 600px; /* Increased height for proportion */
+  background: rgb(255, 0, 179);
+  background: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0, 212, 255, 1) 100%);
+  transition: 0.3s ease;
+  border-radius: 30px;
+}
+
+.card::after {
+  content: '';
+  background-color: #181818;
+  position: absolute;
+  z-index: 1;
+  transition: 0.3s ease;
+  height: 98%;
+  width: 98%;
+  top: 1%;
+  left: 1%;
+  border-radius: 28px;
+}
+
+.card:hover {
+  filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 1));
+}
+
+/* Grid container to center cards */
+.card-container {
+  display: grid;
+  gap: 2rem; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  padding: 2rem; /* Add padding for spacing */
+  margin: 0 auto; /* Center the container itself */
+  max-width: 1200px; /* Optional: limit the container width */
+}
+
+/* Large screens (lg: 1024px and above) */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  .card {
+    width: 550px; /* Adjust card size for large screens */
+    height: 600px;
+  }
+}
+
+/* Medium screens (md: 768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+  .card {
+    width: 580px; /* Adjust card size for medium screens */
+    height: 550px;
+  }
+}
+
+/* Small screens (sm: below 768px) */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+  .card {
+    width: 450px; /* Smaller card size for small screens */
+    height: 550px;
+  }
+}

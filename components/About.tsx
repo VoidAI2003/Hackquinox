@@ -12,7 +12,7 @@ export function About() {
           About HackQuinox
         </span>
       </div>
-      <div className="flex flex-row text-3xl h-auto p-10" style={{ fontFamily: 'var(--font-roboto)' }}>
+      <div className="flex flex-row text-3xl h-auto p-10 text-white" style={{ fontFamily: 'var(--font-roboto)' }}>
         <div className="flex-1 max-w-[50%]">
           <p className="text-justify py-10 max-w-[80%]">
             {text} 

@@ -3,7 +3,7 @@ import Faq from "@/components/FAQs";
 import Footer from "@/components/Footer";
 import Main from "@/components/Main";
 import ScheduleCard from "@/components/schedule";
-import Theme from "@/components/Theme";
+import PS from "@/components/theme2";
 
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <About/>
     </section>
     <section id="theme" className="py-11">
-    <Theme/>
+    <PS/>
     </section>
     <section id="timeline" className="py-11">
     <div className="relative inline-flex overflow-hidden rounded-xl ml-3 p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
