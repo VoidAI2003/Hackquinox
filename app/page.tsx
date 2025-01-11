@@ -28,6 +28,9 @@ export default function Home() {
       </div>
     <ScheduleCard/>
     </section>
+
+
+    
     <section id="faq" className="pt-[50rem]">
     <div className="relative inline-flex overflow-hidden rounded-xl ml-3 p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
         <span className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#A42A93_0%,#E2CBFF_50%,#A42A93_100%)]" />
