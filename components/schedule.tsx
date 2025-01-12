@@ -4,6 +4,7 @@
 import React from 'react';
 import "./timeline.css";
 
+
 const ScheduleCard: React.FC = () => {
   return (<>
     <div className="bg-darkBackground text-lightText min-h-screen  flex items-center justify-center">
@@ -23,31 +24,7 @@ const ScheduleCard: React.FC = () => {
           
           {/* Left Side */}
           <div className="relative">
-          <p className="absolute top-[10px] left-[870px] text-white font-Orbitron font-bold text-[30px] text-center leading-tight transition-all duration-300 hover:scale-110 hover:rotate-12 hover:text-pink-500 hover:shadow-2xl hover:translate-x-6 hover:animate-moveAndRotate">
-  31 January<br />
-  Preparation<br />
-  Time
-</p>
-
-<style jsx>{`
-  /* Keyframes for move and rotate animation */
-  @keyframes moveAndRotate {
-    0% {
-      transform: translateX(0) rotate(0deg); /* Initial position */
-    }
-    50% {
-      transform: translateX(20px) rotate(15deg); /* Move right and rotate */
-    }
-    100% {
-      transform: translateX(0) rotate(0deg); /* Back to original position */
-    }
-  }
-
-  /* Apply move and rotate animation on hover */
-  .hover\:animate-moveAndRotate:hover {
-    animation: moveAndRotate 0.6s ease-in-out forwards;
-  }
-`}</style>
+          
 
             {/* Image for Character 1 */}
             
@@ -208,6 +185,7 @@ const ScheduleCard: React.FC = () => {
   className="absolute top-[-190px] left-[-50px] transition-transform duration-300 hover:scale-110 animate-waving-flag"
 />
 
+
 <style jsx>{`
   /* Keyframes for waving flag animation */
   @keyframes wavingFlag {
@@ -232,6 +210,15 @@ const ScheduleCard: React.FC = () => {
     transform: scale(1.1) rotate(-5deg) translateX(0) translateY(0); /* Slight scale-up on hover */
   }
 `}</style>
+
+<p className="absolute top-[10px] left-[850px] text-white font-Orbitron font-bold text-[30px] text-center leading-tight transition-transform duration-300 hover:scale-110 p-4 z-10 hover:text-pink-light hover:shadow-pink-light">
+  31 January<br />
+  Preparation<br />
+  Times
+</p>
+
+
+
 
 
            
