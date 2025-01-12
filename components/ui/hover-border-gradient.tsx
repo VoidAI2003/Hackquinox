@@ -64,10 +64,10 @@ export function HoverBorderGradient({
     >
       <div
         className={cn(
-          "w-auto z-10 text-xl px-4 py-2 rounded-[inherit]",
+          "w-auto z-10 text-xl px-6 py-2 rounded-[inherit]",
           className
         )}
-        style={{ fontFamily: "var(--font-orbitron)" }}
+        style={{ fontFamily: "var(--font-space-mono)" }}
       >
         {children}
       </div>
