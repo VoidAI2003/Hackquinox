@@ -4,7 +4,7 @@
 
 body {
   background-color: black; /* Set background to black */
-  color: white; /* Set text color to white */
+  /*color: white; /* Set text color to white */
 }
 
 .glow-on-hover {
@@ -52,4 +52,13 @@ body {
 
 .text-hover-effect:hover::before {
   top: 0;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
