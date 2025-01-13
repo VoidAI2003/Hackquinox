@@ -41,7 +41,7 @@ const ScheduleCard: React.FC = () => {
 
 
           <p className="absolute top-[10px] left-[-60px] text-white font-Orbitron font-bold text-[30px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
-            28 & 29 January<br />
+            14 to 28 January<br />
             Ideation Round<br />
             Begins
           </p>
@@ -63,8 +63,8 @@ const ScheduleCard: React.FC = () => {
               className="absolute top-[-100px] left-[625px] transition-transform duration-300 hover:scale-110"
             />
             <p className="absolute top-[10px] left-[425px] text-white font-Orbitron font-bold text-[30px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
-  30 January<br />
-  Result<br />
+  29 January<br />
+  Round 1 Result<br />
   Declaration
 </p>
 
@@ -212,9 +212,9 @@ const ScheduleCard: React.FC = () => {
 `}</style>
 
 <p className="absolute top-[10px] left-[850px] text-white font-Orbitron font-bold text-[30px] text-center leading-tight transition-transform duration-300 hover:scale-110 p-4 z-10 hover:text-pink-light hover:shadow-pink-light">
-  31 January<br />
+  30 & 31 January<br />
   Preparation<br />
-  Times
+  Time
 </p>
 
 
