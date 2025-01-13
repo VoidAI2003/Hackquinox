@@ -23,7 +23,7 @@ export default function Home() {
         <span className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#A42A93_0%,#E2CBFF_50%,#A42A93_100%)]" />
         <span className="inline-flex cursor-pointer items-center justify-center 
         rounded-xl bg-black px-6 py-5 text-6xl text-white backdrop-blur-3xl"
-         style={{ fontFamily: 'var(--font-exo2)' }}>
+         style={{ fontFamily: 'var(Orbitron)' }}>
           Timeline
         </span>
       </div>
