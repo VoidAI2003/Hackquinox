@@ -1,15 +1,21 @@
-import React from 'react';
+'use client';  
+
+import React, { useState } from 'react';
 import { Orbitron, Montserrat } from 'next/font/google';
 import './pscards.css';
+import './ps-button.css'
 
 const orbitron = Orbitron({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export default function PS() {
+  const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
+
   // Data structure for domains and their problem statements
   const domains = [
     {
       domain: "WEB DEV",
+   
       problems: [
         {
           title: "1. Local Farmer’s Market Finder",
@@ -45,6 +51,7 @@ export default function PS() {
     },
     {
       domain: "AI/ML",
+      
       problems: [
         {
           title: "1.  AI-Powered Skill Development Platform for Youth:",
@@ -56,7 +63,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 <strong>Track Progress:</strong> Offer simple progress tracking through periodic assessments or milestones.
 <strong>Actionable Feedback:</strong> Include at least one feature that delivers specific feedback or activities to help students improve in key areas.
 `
-,
+          ,
         },
         {
           title: "2. AI for Air Pollution Forecasting",
@@ -70,12 +77,13 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 <strong>Historical Trends Analysis:</strong> Show past AQI trends for comparative insights.
 <strong>User-Friendly Dashboard:</strong> Include interactive graphs, heatmaps, and pollutant data visualization
 <strong>API:</strong> OpenAQ`
-,
+          ,
         },
       ],
     },
     {
       domain: "BLOCKCHAIN",
+     
       problems: [
         {
           title: "1. Secure Voting System on Blockchain ",
@@ -91,7 +99,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 1. Solidity smart contract documentation. 
 2. Ethereum development guide. 
 3. Blockchain and voting use case studies.` 
-,
+          ,
         },
         {
           title: "2. Phishing Email Detector",
@@ -105,46 +113,60 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 1. Python email parsing library documentation. 
 2. Scikit-learn for text classification. 
 3. Phishing prevention guide by OWASP`
-,
+          ,
         },
       ],
     },
   ];
-  return (
-    <div className="flex flex-col items-center gap-8 w-full min-h-screen py-12 bg-#00050C">
-      {/* Domains and their Problem Statements */}
-      {domains.map((domain, domainIndex) => (
-        <div key={domainIndex} className="w-full flex flex-col items-center gap-8 mt-12">
-          {/* Domain Title */}
-          <h2 className={`${orbitron.className} text-[48px] font-bold text-white text-center`}>
-            {domain.domain}
-          </h2>
 
-          {/* Problem Statement Cards */}
-          <div className="card-container w-full">
-            {domain.problems.map((problem, problemIndex) => (
-              <div key={problemIndex} className="card">
-                {/* Inner Content */}
-                <div className="absolute z-10 p-4 text-center">
-                  {/* Title */}
-                  <h3 className={`${orbitron.className} text-[18px] font-bold text-white`}>
-                    {problem.title}
-                  </h3>
-                  {/* Description */}
-                  <p
-                    className={`${montserrat.className} text-[14px] text-gray-300 mt-2`}
-                    style={{
-                      whiteSpace: 'pre-line',
-                      textAlign: 'left', // Align text to the left
-                    }}
-                    dangerouslySetInnerHTML={{ __html: problem.description }} // Inject the HTML safely
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+  const handleNext = () => {
+    setCurrentDomainIndex((prevIndex) => (prevIndex + 1) % domains.length);
+  };
+  
+  const handlePrev = () => {
+    setCurrentDomainIndex((prevIndex) => (prevIndex - 1 + domains.length) % domains.length);
+  };
+  
+  return (
+    <div className="flex flex-col items-center gap-8 w-full min-h-screen py-12 bg-[#00050C]">
+      {/* Current Domain */}
+      <div className="w-full flex flex-col items-center gap-8 mt-12">
+        <div className="title-container">
+          <h2 className={`${orbitron.className} text-[48px] font-bold text-white text-center`}>
+            {domains[currentDomainIndex].domain}
+          </h2>
         </div>
-      ))}
+  
+        {/* Problem Statement Cards */}
+        <div className="card-container w-full">
+          {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
+            <div key={problemIndex} className="card">
+              <div className="absolute z-10 p-4 text-center">
+                <h3 className={`${orbitron.className} text-[18px] font-bold text-white`}>{problem.title}</h3>
+                <p
+                  className={`${montserrat.className} text-[14px] text-gray-300 mt-2`}
+                  style={{ whiteSpace: 'pre-line', textAlign: 'left' }}
+                  dangerouslySetInnerHTML={{ __html: problem.description }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+  
+      {/* Navigation Buttons */}
+      <div className="flex justify-center gap-4 mt-8">
+        <div className="button-borders">
+          <button className="primary-button" onClick={handlePrev}>
+            Previous
+          </button>
+        </div>
+        <div className="button-borders">
+          <button className="primary-button" onClick={handleNext}>
+            Next
+          </button>
+        </div>
+      </div>
     </div>
   );
-}
+};
