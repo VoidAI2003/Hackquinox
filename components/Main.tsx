@@ -47,10 +47,20 @@ const Main = () => {
                     {/* <h1 className='text-9xl text-center p-10 font-bold' style={{ fontFamily: 'var(--font-doto)' }}>
                         HackQuinox
                     </h1> */}
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl  max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700
-                     dark:from-neutral-800 dark:via-white dark:to-white" style={{ fontFamily: 'var(--font-orbitron)' }}>
-                          HackQuinox
-                    </h1>
+                    <div className="relative grid grid-cols-[auto,auto] items-start justify-center gap-x-2 max-w-7xl mx-auto mt-6 z-20 py-6">
+                        <h1 
+                            className="text-6xl sm:text-5xl md:text-6xl lg:text-9xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white" 
+                            style={{ fontFamily: 'var(--font-orbitron)' }}
+                        >
+                            HackQuinox
+                        </h1>
+                        <h1 
+                            className="text-xl md:text-2xl lg:text-4xl self-start -mt-4 sm:-mt-6 md:-mt-8 lg:-mt-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white" 
+                            style={{ fontFamily: 'var(--font-orbitron)' }}
+                        >
+                            2025
+                        </h1>
+                    </div>  
                     <h2 className='text-5xl text-center py-4' style={{ fontFamily: 'var(--font-exo2)' }}>
                         <TextGenerateEffect words={text} />
                     </h2>

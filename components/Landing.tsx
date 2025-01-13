@@ -57,7 +57,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden sm:flex items-center gap-4">
           <div className="flex flex-row gap-2 md:gap-6">
-            {['Home', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
+            {['Home', 'Themes', 'Timeline','Prizes', 'FAQs', 'Contact'].map((item) => (
               <Link 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
@@ -136,7 +136,7 @@ const Navbar = () => {
                   </svg>
                 </button>
                 <div className="flex flex-col gap-4 mt-4">
-                  {['Home', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
+                  {['Home', 'Themes', 'Timeline','Prizes','FAQs', 'Contact'].map((item) => (
                     <Link
                       key={item}
                       href={`#${item.toLowerCase()}`}
