@@ -1,10 +1,46 @@
-.faq-background {
-  background-image: url('/faq_background.jpg'); /* Replace with the actual path */
-  background-size: cover;
-  background-repeat: no-repeat;
+
+/* .faq-background {
+  background-image: url('/faq2.jpg'); 
+  background-size: contain;
+  background-repeat: no-repeat; 
   background-position: center;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%; 
 }
+
+
+@media (max-width: 768px) {
+  .faq-background {
+    background-size: contain; 
+    background-position: top center; 
+  }
+} */
+/* FAQ Answer Section */
+/* FAQ Answer Container */
+.answer-container {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.answer-content {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.answer-content.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 1rem 0;
+}
+
+@media (max-width: 640px) {
+  .answer-content.open {
+    max-height: 500px;
+    padding: 0.5rem 0;
+  }
+}
+
 
 .Btn {
   width: 45px;
@@ -68,108 +104,74 @@
   transition: transform 0s;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Responsive Styles for 1024px (Tablet Devices) */
+@media (max-width: 1024px) {
   .faq-background {
     background-size: cover;
-    padding: 0 10px; /* Add padding to ensure content doesn't touch edges */
+    padding: 0 20px;
   }
 
   .faq-container {
-    padding: 8px;
+    padding: 16px;
   }
 
-  .faq-section {
-    padding: 8px;
+  .faq-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .faq-item {
+    font-size: 1.4rem;
+  }
+
+  .Btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .svgContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .Btn svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-section {
+    margin-top: 25px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust for tablet screens */
+  }
+}
+
+/* Responsive Styles for 480px (Small Devices) */
+@media (max-width: 480px) {
+  .faq-background {
+    background-size: cover;
+    padding: 0 10px;
+  }
+
+  .faq-container {
+    padding: 10px;
   }
 
   .faq-section h2 {
     font-size: 1.8rem;
   }
 
-  .faq-section .faq-item {
-    font-size: 1.2rem;
-  }
-
-  .Btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  .faq-container {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
-  .w-800px {
-    width: 100%;
-    max-width: 800px;
-    padding: 0 8px;
-  }
-  
-
   .faq-item {
     font-size: 1rem;
   }
 
-  .faq-background {
-    min-height: auto;
+  .Btn {
+    width: 35px;
+    height: 35px;
   }
 
   .svgContainer {
-    width: 40px;
-    height: 40px;
-  }
-
-  .faq-container p {
-    font-size: 1rem;
-  }
-
-  .Btn svg {
-    width: 28px;
-    height: 28px;
-  }
-
-  .text-4xl {
-    font-size: 2rem;
-  }
-
-  .faq-section {
-    padding: 8px;
-  }
-
-  .w-full {
-    width: 100%;
-  }
-
-  .faq-container p {
-    font-size: 1rem;
-  }
-
-  .contact-section {
-    margin-top: 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* For extra small devices */
-@media (max-width: 480px) {
-  .faq-container {
-    padding: 5px;
-  }
-
-  .faq-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .faq-container .faq-item {
-    font-size: 1rem;
-  }
-
-  .Btn {
     width: 35px;
     height: 35px;
   }
@@ -179,20 +181,20 @@
     height: 24px;
   }
 
-  .faq-background {
-    min-height: auto;
+  .contact-section {
+    margin-top: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Adjust for small screens */
   }
 
   .text-4xl {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
-  .svgContainer {
-    width: 35px;
-    height: 35px;
-  }
-
-  .contact-section {
-    margin-top: 15px;
+  .answer-content.open {
+    max-height: 300px;
+    padding: 0.5rem 0;
   }
 }
