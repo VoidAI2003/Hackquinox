@@ -28,10 +28,10 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
       } as React.CSSProperties}
       className={cn(
         // Base text styling
-        "mx-auto max-w-md text-neutral-600/70 dark:text-neutral-400/70",
+        "text-neutral-200/70 dark:text-neutral-100/70",
         
         // Animation properties
-        "animate-[shine_10s_cubic-bezier(.6,.6,0,1)_infinite]",
+        "animate-[shine_8s_cubic-bezier(.6,.6,0,1)_infinite]",
         "bg-[length:var(--shiny-width)_100%]",
         "bg-no-repeat",
         "bg-[position:0_0]",

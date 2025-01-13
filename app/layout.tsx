@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Exo_2, Roboto, Audiowide, Space_Mono,Doto,Gugi} from "next/font/google";
+import { Orbitron, Exo_2, Roboto, Audiowide, Space_Mono,Doto,Gugi,Iceland} from "next/font/google";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -17,11 +17,11 @@ const exo2 = Exo_2({
   subsets: ["latin"],
   weight: "400",
 });
-// const iceland = Iceland({
-//   variable: "--font-iceland",
-//   subsets: ["latin"],
-//   weight: "400",
-// });
+const iceland = Iceland({
+  variable: "--font-iceland",
+  subsets: ["latin"],
+  weight: "400",
+});
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
@@ -61,12 +61,13 @@ export default function RootLayout({
           <div className={exo2.variable}>
             <div className={gugi.variable}>
               <div className={doto.variable}>
-
+              <div className={iceland.variable}>
               
             <div className={roboto.variable}>
               <div className={audiowide.variable}>
                 {children}
               </div>
+            </div>
             </div>
             </div>
             </div>

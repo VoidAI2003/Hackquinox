@@ -114,7 +114,7 @@ export default function Faq() {
           </div>
         </div>
 
-        {/* Contact Section */}
+        {/* Contact Section
         <div className="w-full max-w-4xl mx-auto p-4 sm:p-8 rounded-xl mt-8 sm:mt-12 border-4 bg-black/95 border-pink-500">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white text-center mb-6 sm:mb-8">
             More Queries?
@@ -138,7 +138,7 @@ export default function Faq() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     </>
