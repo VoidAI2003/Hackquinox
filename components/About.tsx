@@ -8,6 +8,7 @@ export function About() {
 
   return (
     <>
+
       <LampHeader 
         text="About HackQuinox"
         lampColor="#A42A93"

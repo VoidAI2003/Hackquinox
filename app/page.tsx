@@ -3,7 +3,7 @@ import Faq from "@/components/FAQs";
 import Footer from "@/components/Footer";
 import Main from "@/components/Main";
 import ScheduleCard from "@/components/schedule";
-import Theme from "@/components/Theme";
+import PS from "@/components/theme2";
 
 
 export default function Home() {
@@ -14,7 +14,8 @@ export default function Home() {
   </section>
     <section className="py-11">
     <About/>
-    </section>
+      </section>
+    <PS/>
     <section id="themes" className="py-11">
     <Theme/>
     </section>
