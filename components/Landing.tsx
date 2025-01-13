@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
+import { HoverBorderGradient2 } from './ui/advanceHBG';
 
 const Navbar = () => {
   const [bgOpacity, setBgOpacity] = useState(0);
@@ -75,7 +76,18 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-
+            <Link href = "https://google.com">
+            <HoverBorderGradient2
+                  containerClassName="rounded-full h-full"
+                  className="dark:bg-black bg-white text-black dark:text-white 
+                    flex items-center justify-center h-full px-6 py-2.5 sm:py-2.5
+                    "
+                    defaultColor="#ffcb05"
+                    hoverColor="#e74c3c"
+                >
+                  Register Now !! 
+                </HoverBorderGradient2>
+            </Link>
             {['Home', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
               <Link 
                 key={item} 
@@ -87,11 +99,13 @@ const Navbar = () => {
                   className="dark:bg-black bg-white text-black dark:text-white 
                     flex items-center justify-center h-full px-6 py-2.5 sm:py-2.5
                     "
+                    
                 >
                   {item}
                 </HoverBorderGradient>
               </Link>
             ))}
+            
           </div>
         </div>
       </div>

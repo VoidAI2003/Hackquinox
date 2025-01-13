@@ -5,8 +5,6 @@ import { TextGenerateEffect } from './ui/text-generate-effect';
 import { Vortex } from "@/components/ui/vortex";
 import Navbar from "@/components/Landing";
 import MainBottom from './mainBottom';
-import { Cover } from './ui/cover';
-import { Header } from './Header';
 const Main = () => {
     const text = 'Align, Create, Evolve';
     return (
