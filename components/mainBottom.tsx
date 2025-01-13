@@ -6,7 +6,7 @@ const mainBottom = () => {
 
             <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="text-5xl p-10 dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 "
+                className="text-2xl p-5 dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 "
                 style={{ fontFamily: 'var(--font-orbitron)' }}
               >1ST & 2ND FEB 2025
               </HoverBorderGradient>
