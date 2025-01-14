@@ -5,7 +5,7 @@ import Image from "next/image";
 type FooterLinkType = {
   label: string;
   href: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 const Footer: React.FC = () => {
