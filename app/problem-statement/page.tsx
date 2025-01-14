@@ -1,15 +1,16 @@
-'use client';  
-
+'use client';
 import React, { useState } from 'react';
 import { Orbitron, Montserrat } from 'next/font/google';
+import { useRouter } from 'next/navigation'; // Import the useRouter hook
 import './pscards.css';
-import './ps-button.css'
+import './ps-button.css';
 
 const orbitron = Orbitron({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export default function PS() {
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
+  const router = useRouter(); // Initialize the router
 
   // Data structure for domains and their problem statements
   const domains = [
@@ -126,23 +127,44 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
   const handlePrev = () => {
     setCurrentDomainIndex((prevIndex) => (prevIndex - 1 + domains.length) % domains.length);
   };
-  
+
   return (
     <div className="flex flex-col items-center gap-8 w-full min-h-screen py-12 bg-[#00050C]">
-      {/* Current Domain */}
+      {/* Back Button */}
+      <div style={{ position: 'absolute', top: '120px', left: '200px', zIndex: 1000 }}>
+        <button
+          className="primary-button"
+          onClick={() => router.back()}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#0E1822',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '14px',
+            
+          }}
+        >
+          Back
+        </button>
+      </div>
+
+      {/* Main Content */}
       <div className="w-full flex flex-col items-center gap-8 mt-12">
         <div className="title-container">
           <h2 className={`${orbitron.className} text-[48px] font-bold text-white text-center`}>
             {domains[currentDomainIndex].domain}
           </h2>
         </div>
-  
-        {/* Problem Statement Cards */}
+
         <div className="card-container w-full">
           {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
             <div key={problemIndex} className="card">
               <div className="absolute z-10 p-4 text-center">
-                <h3 className={`${orbitron.className} text-[18px] font-bold text-white`}>{problem.title}</h3>
+                <h3 className={`${orbitron.className} text-[18px] font-bold text-white`}>
+                  {problem.title}
+                </h3>
                 <p
                   className={`${montserrat.className} text-[14px] text-gray-300 mt-2`}
                   style={{ whiteSpace: 'pre-line', textAlign: 'left' }}
@@ -153,8 +175,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
           ))}
         </div>
       </div>
-  
-      {/* Navigation Buttons */}
+
       <div className="flex justify-center gap-4 mt-8">
         <div className="button-borders">
           <button className="primary-button" onClick={handlePrev}>
@@ -169,4 +190,4 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
       </div>
     </div>
   );
-};
+}
