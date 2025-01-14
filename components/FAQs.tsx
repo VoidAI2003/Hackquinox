@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import "./faq.css";
+import LampHeader from "./ui/lamp";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -41,32 +42,52 @@ export default function Faq() {
   );
 
   const faqData = [
-    { question: "What is HackQuinox?", answer: "HackQuinox is a 24-hour hackathon where participants collaborate to create innovative solutions to real-world problems." },
-    { question: "Who can participate in HackQuinox?", answer: "HackQuinox is open to students, professionals, and enthusiasts of all skill levels." },
-    { question: "What is the duration of the hackathon?", answer: "The hackathon lasts for 24 hours, starting at 9 AM on Saturday and ending at 9 AM on Sunday." },
-    { question: "Is there a registration fee?", answer: "No, participation in HackQuinox is completely free." },
-    { question: "Will there be any prizes?", answer: "Yes, there are exciting prizes for winners, including cash awards, swag, and more." },
-    { question: "Are team projects allowed?", answer: "Yes, participants can work in teams of up to 4 members." },
-    { question: "Do I need to bring my own equipment?", answer: "Yes, participants should bring their own laptops, chargers, and any other necessary equipment." },
-    { question: "Will food and drinks be provided?", answer: "Yes, we will provide meals, snacks, and beverages throughout the event." },
-    { question: "Can I participate remotely?", answer: "HackQuinox is an in-person event; remote participation is not allowed." },
-    { question: "How can I contact the organizing team?", answer: "You can reach out to us via email at support@hackquinox.com or through our social media channels." },
-    { question: "What are the judging criteria?", answer: "Projects will be judged based on innovation, technical difficulty, design, and impact on the community." },
-    { question: "Can I modify my project after submission?", answer: "No, once a project is submitted, no further modifications are allowed." },
-    { question: "What technologies are allowed?", answer: "Any programming languages and frameworks can be used. However, we encourage using open-source tools and technologies." },
-    { question: "Is mentorship available?", answer: "Yes, mentors will be available throughout the event to assist participants." },
-    { question: "Where is the event taking place?", answer: "The event will be held at [Event Venue]. Detailed location will be provided upon registration." },
+    { question: "What is HackQuinox?", 
+      answer: "HackQuinox is a 10-hour hackathon where participants collaborate to create innovative solutions to real-world problems." },
+    { question: "Who can participate in HackQuinox?", 
+      answer: "HackQuinox is open to students, professionals, and enthusiasts of all skill levels." },
+    { question: "What is the duration of the hackathon?", 
+      answer: "The hackathon lasts for 10 hours, starting at 9 AM on Saturday." },
+    { question: "Is there a registration fee?", 
+      answer: "No, participation in HackQuinox is completely free." },
+    { question: "Will there be any prizes?", 
+      answer: "Yes, there are exciting prizes for winners, including cash awards, swag, and more." },
+    { question: "Are team projects allowed?", 
+      answer: "Yes, participants can work in teams of up to 4 members." },
+    { question: "Do I need to bring my own equipment?", 
+      answer: "Yes, participants should bring their own laptops, chargers, and any other necessary equipment." },
+    { question: "Will food and drinks be provided?", 
+      answer: "Yes, we will provide meals, snacks, and beverages throughout the event." },
+    { question: "Can I participate remotely?", 
+      answer: "HackQuinox is an in-person event; remote participation is not allowed." },
+    { question: "How can I contact the organizing team?", 
+      answer: "You can reach out to us via email at info.hackquinox@gmail.com or through our social media channels." },
+    { question: "What are the judging criteria?", 
+      answer: "Projects will be judged based on innovation, technical difficulty, design, and impact on the community." },
+    { question: "Can I modify my project after submission?", 
+      answer: "No, once a project is submitted, no further modifications are allowed." },
+    { question: "What technologies are allowed?", 
+      answer: "Any programming languages and frameworks can be used. However, we encourage using open-source tools and technologies." },
+    { question: "Is mentorship available?", 
+      answer: "Yes, mentors will be available throughout the event to assist participants." },
+    { question: "Where is the event taking place?", 
+      answer: "Disclosed Shortly " },
   ];
 
   const contactInfo = [
-    { href: "mailto:example@gmail.com", icon: Mail, label: "example@gmail.com" },
+    { href: "mailto:info.hackquinox@gmail.com", icon: Mail, label: "info.hackquinox@gmail.com" },
     { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
     { href: "tel:989xxxxxx", icon: Phone, label: "989xxxxxx" },
     { href: "https://discord.com/users/username", icon: MessageCircle, label: "@username" },
   ];
 
   return (
-    <div className="min-h-screen w-full px-4 sm:px-6 lg:px-8 bg-[#000019]">
+    <>
+    <LampHeader 
+      text="Frequntly Asked Questions"
+    lampColor="#ff007f"
+    />
+    <div id="faq-section" className="min-h-screen w-full px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto py-8 sm:py-12">
         {/* FAQ Section */}
         <div className="w-full rounded-xl border border-pink-500/20 mt-12 sm:mt-24 p-4 sm:p-8">
@@ -74,7 +95,7 @@ export default function Faq() {
             {faqData.map((faq, index) => (
               <div key={index} className="text-white transition-all duration-300">
                 <div className="flex justify-between items-center gap-4">
-                  <span className="text-base sm:text-xl lg:text-3xl transition-all duration-300">{faq.question}</span>
+                  <span className="text-xl sm:text-xl lg:text-4xl transition-all duration-300">{faq.question}</span>
                   <button
                     onClick={() => toggleAnswer(index)}
                     className={`shrink-0 transition-all duration-300 hover:scale-110 ${
@@ -97,7 +118,7 @@ export default function Faq() {
                       openIndex === index ? "open" : ""
                     }`}
                   >
-                    <p className="text-sm sm:text-base lg:text-lg transition-all duration-300">
+                    <p className="text-xl sm:text-lg lg:text-2xl transition-all duration-300">
                       {faq.answer}
                     </p>
                   </div>
@@ -107,7 +128,7 @@ export default function Faq() {
           </div>
         </div>
 
-        {/* Contact Section */}
+        {/* Contact Section
         <div className="w-full max-w-4xl mx-auto p-4 sm:p-8 rounded-xl mt-8 sm:mt-12 border-4 bg-black/95 border-pink-500">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white text-center mb-6 sm:mb-8">
             More Queries?
@@ -131,8 +152,9 @@ export default function Faq() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
+    </>
   );
 }
