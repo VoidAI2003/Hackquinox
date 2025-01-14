@@ -15,35 +15,58 @@ type SocialLinkType = {
 
 const Footer: React.FC = () => {
   const links: FooterLinkType[] = [
-    { label: "Code of Conduct", href: "" },
     { label: "FAQs", href: "" },
-    { label: "Meet the Team", href: "" },
     { label: "Timeline", href: "" },
   ];
 
-  const socialLinks: SocialLinkType[] = [
+  const socialLinks = [
     {
-      platform: "Mail",
-      href: "",
-      icon: <Image src="/mail.jpg" alt="Mail Icon" width={40} height={40} />,
+      title: "CSI FCRIT",
+      links: [
+        {
+          href: "mailto:info.hackquinox@gmail.com",
+          imgSrc: "/mail.jpg",
+          alt: "Mail Icon",
+          ariaLabel: "Email CSI FCRIT",
+        },
+        {
+          href: "https://www.instagram.com/csifcrit",
+          imgSrc: "/Instagram.jpg",
+          alt: "Instagram Icon",
+          ariaLabel: "CSI Instagram",
+        },
+        {
+          href: "https://www.linkedin.com/company/csi-computer-fcrit",
+          imgSrc: "/LinkedIn.jpg",
+          alt: "LinkedIn Icon",
+          ariaLabel: "CSI LinkedIn",
+        },
+      ],
     },
     {
-      platform: "Instagram",
-      href: "",
-      icon: <Image src="/Instagram.jpg" alt="Instagram Icon" width={40} height={40} />,
+      title: "AIDL FCRIT",
+      links: [
+        {
+          href: "mailto:info.hackquinox@gmail.com",
+          imgSrc: "/mail.jpg",
+          alt: "Mail Icon",
+          ariaLabel: "Email AIDL FCRIT",
+        },
+        {
+          href: "https://www.instagram.com/aidl_fcrit?igsh=MXducHl6MHYzNm92dg==",
+          imgSrc: "/Instagram.jpg",
+          alt: "Instagram Icon",
+          ariaLabel: "AIDL Instagram",
+        },
+        {
+          href: "https://www.linkedin.com/company/artificial-intelligence-and-deep-learning-club-fcrit",
+          imgSrc: "/LinkedIn.jpg",
+          alt: "LinkedIn Icon",
+          ariaLabel: "AIDL LinkedIn",
+        },
+      ],
     },
-    {
-      platform: "Discord",
-      href: "",
-      icon: <Image src="/Discord.jpg" alt="Discord Icon" width={40} height={40} />,
-    },
-    {
-      platform: "Linkedin",
-      href: "",
-      icon: <Image src="/Linkedin.jpg" alt="Instagram Icon" width={40} height={40} />,
-    },
-  ];
-
+  ]
   return (
     <div className="flex flex-col">
       {/* Footer */}
@@ -104,28 +127,41 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Social Links Section */}
-            <div className="flex flex-col items-center md:items-start space-y-4 order-2 md:order-3">
-              <h3
-                className="text-2xl md:text-[30px] font-medium mb-4"
-                style={{ fontFamily: "Share Tech Mono, monospace" }}
+            <div className="flex flex-col items-center md:items-start space-y-6 order-2 md:order-3">
+      <h3
+        className="text-2xl md:text-[30px] font-medium mb-4"
+        style={{ fontFamily: "Share Tech Mono, monospace" }}
+      >
+        Socials
+      </h3>
+      {socialLinks.map((group, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center md:items-start space-y-4"
+        >
+          <h4
+            className="text-xl font-medium mb-2"
+            style={{ fontFamily: "var(--font-exo2)" }}
+          >
+            {group.title}
+          </h4>
+          <div className="grid grid-cols-2 gap-4 md:gap-2 items-center justify-center w-full max-w-[200px]">
+            {group.links.map((link, linkIndex) => (
+              <a
+                key={linkIndex}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors duration-200 flex justify-center"
+                aria-label={link.ariaLabel}
               >
-                Socials
-              </h3>
-              <div className="grid grid-cols-2 gap-4 md:gap-2 items-center justify-center w-full max-w-[200px]">
-                {socialLinks.map((social) => (
-                  <a key={social.platform}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:text-white transition-colors duration-200 flex justify-center"
-                    aria-label={`Follow us on ${social.platform}`}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-
+                <Image src={link.imgSrc} alt={link.alt} width={40} height={40} />
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
             {/* Quick Links Section */}
             <div className="flex flex-col items-center md:items-start space-y-4 order-4">
               <h3
