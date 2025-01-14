@@ -7,7 +7,8 @@ import "./timeline.css";
 
 const ScheduleCard: React.FC = () => {
   return (<>
-    <div className="bg-darkBackground text-lightText min-h-screen  flex items-center justify-center">
+    <div className="bg-darkBackground text-lightText min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 text-center">
+
     <div className="bg-animation">
     <div id="stars"></div>
     <div id="stars2"></div>
@@ -20,10 +21,10 @@ const ScheduleCard: React.FC = () => {
         {/* Title */}
         
         {/* Schedule Grid */}
-        <div className="grid grid-cols-2 gap-12 relative">
+<div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 container mx-auto p-4">
           
           {/* Left Side */}
-          <div className="relative">
+          <div className=" flex-1 relative">
           
 
             {/* Image for Character 1 */}
@@ -171,7 +172,7 @@ const ScheduleCard: React.FC = () => {
               height={200}
               className="absolute top-[900px] left-[200px] transition-transform duration-300 hover:scale-110"
             />
-           <p className="absolute top-[1000px] left-[425px] text-white font-Orbitron font-bold text-[28px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
+           <p className="absolute top-[1000px] left-[390px] text-white font-Orbitron font-bold text-[28px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
   2 February<br />
   Final Presentation<br />
   Round
