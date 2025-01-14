@@ -24,12 +24,12 @@ export default function Home() {
     
     <ScheduleCard/>
     </section>
-    <section id="prizes" className="mt-96">
+    <section id="prizes" className="lg:my-32 sm:py-0">
       <Prizes/>
 
     </section>
 
-    <section id="faqs" className="py-11 mt-80">
+    <section id="faqs" className="py-11 ">
         
         <Faq />
       </section>

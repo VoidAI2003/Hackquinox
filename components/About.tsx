@@ -5,10 +5,10 @@ import AnimatedShinyText from "./textshineeffect";
 
 export function About() {
   const text1 =
-    "Welcome to HackQuinox 2025, an exciting offline hackathon hosted by Agnel Charities Fr. C. Rodrigues Institute of Technology, Navi Mumbai, in a collaborative effort between CSI-FCRIT and the AI & Deep Learning (AIDL) Club.";
-  const text2 = "HackQuinox serves as a dynamic platform for students to channel their creativity, solve challenging problem statements, and present innovative solutions that address real-world issues. With domains spanning AI/ML, Web Development, Cybersecurity/Blockchain, and Open Innovation, participants will have the opportunity to bring their ideas to life, collaborate with like-minded peers, and gain invaluable insights from seasoned industry experts.";
-  const text3 ="This hackathon is more than just a competition—it's a celebration of innovation, collaboration, and learning. Whether you're a seasoned coder or a budding innovator, HackQuinox 2025 promises to be an enriching experience that pushes the boundaries of technology and creativity.";
-  const text4 ="So, gear up for an unforgettable journey of coding, creating, and collaborating at HackQuinox 2025. We can't wait to see what you'll build!";
+    "Welcome to HackQuinox 2025, an offline hackathon hosted by Agnel Charities Fr. C. Rodrigues Institute of Technology, Navi Mumbai, in collaboration with CSI-FCRIT and the AI & Deep Learning Club.  ";
+  const text2 = "HackQuinox is a vibrant platform for students to unleash creativity, tackle real-world challenges, and present innovative solutions. With domains like AI/ML, Web Development, Cybersecurity/Blockchain, and Open Innovation, participants will collaborate, innovate, and learn from industry experts.";
+  const text3 ="Whether you're a seasoned coder or a budding innovator, HackQuinox 2025 is your chance to push boundaries, connect with peers, and create impactful projects. Let's code, create, and collaborate!";
+  
   return (
     <>
       <LampHeader 
@@ -24,8 +24,7 @@ export function About() {
           <h2 className="text-justify py-4 md:py-6 lg:py-10 max-w-full md:max-w-[90%] lg:max-w-[80%]">
            {text1} <br />
             {text2}<br />
-            {text3}<br />
-            {text4}
+            {text3}
           </h2>
           </AnimatedShinyText>
         </div>

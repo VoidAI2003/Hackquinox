@@ -15,11 +15,10 @@ export default function PS() {
   const domains = [
     {
       domain: "WEB DEV",
-   
       problems: [
         {
-          title: "1. Local Farmer’s Market Finder",
-          description: `Local Farmer’s Market Finder is a web or mobile application designed to bridge the gap between consumers and local farmers' markets. 
+          title: "1. Local Farmer's Market Finder",
+          description: `Local Farmer's Market Finder is a web or mobile application designed to bridge the gap between consumers and local farmers' markets. 
           \n<strong>Key Features:</strong>
           - <strong>Market Search:</strong> Find nearby markets by location or produce type.
           - <strong>Produce Listings:</strong> View available products and prices.
@@ -51,15 +50,14 @@ export default function PS() {
     },
     {
       domain: "AI/ML",
-      
       problems: [
         {
           title: "1.  AI-Powered Skill Development Platform for Youth:",
           description: `Vivek, a student from a small town in West Bengal, has completed his basic education but feels unprepared for the job market. With limited access to career guidance, he is unsure about which skills to focus on or how to start.
 \n<strong>Challenge for Participants:</strong>
 Design an AI-powered prototype of a platform to help students like Vivek identify skill gaps and provide personalized guidance.\nThe platform should:
-<strong>Assess Basic Skills:</strong> Implement a quick self-assessment module to identify a student’s current skill level.
-<strong>Recommend Learning Paths:</strong> Provide personalized suggestions for courses or resources based on the student’s goals and market trends.
+<strong>Assess Basic Skills:</strong> Implement a quick self-assessment module to identify a student's current skill level.
+<strong>Recommend Learning Paths:</strong> Provide personalized suggestions for courses or resources based on the student's goals and market trends.
 <strong>Track Progress:</strong> Offer simple progress tracking through periodic assessments or milestones.
 <strong>Actionable Feedback:</strong> Include at least one feature that delivers specific feedback or activities to help students improve in key areas.
 `
@@ -83,7 +81,6 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
     },
     {
       domain: "BLOCKCHAIN",
-     
       problems: [
         {
           title: "1. Secure Voting System on Blockchain ",
@@ -126,35 +123,50 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
   const handlePrev = () => {
     setCurrentDomainIndex((prevIndex) => (prevIndex - 1 + domains.length) % domains.length);
   };
+
+  const handleBackToMain = () => {
+    window.location.href = '/'; // Replace with your main app route
+  };
   
   return (
-    <div className="flex flex-col items-center gap-4 md:gap-8 w-full min-h-screen py-6 md:py-12 bg-[#00050C] px-4 md:px-8">
-    <div className="w-full flex flex-col items-center gap-4 md:gap-8 mt-8 md:mt-12">
-      <div className="title-container w-full">
-        <h2 className={`${orbitron.className} text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center`}>
-          {domains[currentDomainIndex].domain}
-        </h2>
+    <div className="relative flex flex-col items-center gap-4 md:gap-8 w-full min-h-screen py-6 md:py-12 bg-[#00050C] px-4 md:px-8">
+      {/* Navigation Header */}
+      <div className="w-full flex justify-between items-center mb-4">
+        <div className="button-borders">
+          <button 
+            className="primary-button"
+            onClick={handleBackToMain}
+          >
+            Back
+          </button>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-7xl">
-        {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
-          <div key={problemIndex} className="relative bg-gradient-to-br from-pink-500 to-cyan-500 p-0.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
-            <div className="bg-[#181818] rounded-2xl p-4 md:p-6 h-full">
-              <h3 className={`${orbitron.className} text-base md:text-lg lg:text-xl font-bold text-white mb-3`}>
-                {problem.title}
-              </h3>
-              <div
-                className={`${montserrat.className} text-sm md:text-base text-gray-300 space-y-2`}
-                style={{ whiteSpace: 'pre-line' }}
-                dangerouslySetInnerHTML={{ __html: problem.description }}
-              />
+      <div className="w-full flex flex-col items-center gap-4 md:gap-8">
+        <div className="title-container w-full">
+          <h2 className={`${orbitron.className} text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center`}>
+            {domains[currentDomainIndex].domain}
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-7xl">
+          {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
+            <div key={problemIndex} className="relative bg-gradient-to-br from-pink-500 to-cyan-500 p-0.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+              <div className="bg-[#181818] rounded-2xl p-4 md:p-6 h-full">
+                <h3 className={`${orbitron.className} text-base md:text-lg lg:text-xl font-bold text-white mb-3`}>
+                  {problem.title}
+                </h3>
+                <div
+                  className={`${montserrat.className} text-sm md:text-base text-gray-300 space-y-2`}
+                  style={{ whiteSpace: 'pre-line' }}
+                  dangerouslySetInnerHTML={{ __html: problem.description }}
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
 
-  
       {/* Navigation Buttons */}
       <div className="flex justify-center gap-4 mt-8">
         <div className="button-borders">
@@ -170,4 +182,4 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
       </div>
     </div>
   );
-};
+}

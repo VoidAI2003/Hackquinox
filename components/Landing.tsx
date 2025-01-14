@@ -72,13 +72,13 @@ const Navbar = () => {
                 </HoverBorderGradient>
               </Link>
             ))}
-            <Link href="https://google.com">
+            <Link href="https://unstop.com/p/hackquinox-2025-fr-c-rodrigues-institute-of-technology-fcrit-navi-mumbai-1361395">
               <HoverBorderGradient2
                 containerClassName="rounded-full h-full"
                 className="dark:bg-black bg-white text-black dark:text-white 
                   flex items-center justify-center h-full px-4 py-2"
-                defaultColor="#ffcb05"
-                hoverColor="#e74c3c"
+                defaultColor="#20bf55"
+                hoverColor="#1e96fc"
               >
                 Register Now !!
               </HoverBorderGradient2>
@@ -114,7 +114,8 @@ const Navbar = () => {
               className="fixed inset-0 bg-black bg-opacity-50 z-40"
               onClick={closeSidebar}
             />
-            <div className="fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 z-50 transform transition-transform duration-200 ease-in-out">
+            <div className="fixed top-0 right-0 h-full opacity-95 w-64 bg-white dark:bg-gray-900 
+            z-50 transform transition-transform duration-200 ease-in-out">
               <div className="flex flex-col p-4">
                 <button
                   onClick={closeSidebar}
@@ -147,7 +148,7 @@ const Navbar = () => {
                     </Link>
                   ))}
                   <Link 
-                    href="https://google.com"
+                    href="https://unstop.com/p/hackquinox-2025-fr-c-rodrigues-institute-of-technology-fcrit-navi-mumbai-1361395"
                     onClick={closeSidebar}
                     className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-red-500 text-white rounded-lg text-center"
                   >

@@ -12,7 +12,7 @@ export function Prizes() {
         />
       </div>
       <AnimatedShinyText
-        className="text-4xl text-center p-10 font-bold"
+        className="text-4xl text-center font-bold"
         shimmerWidth={200}
       >
         Coming Soon ...

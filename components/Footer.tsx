@@ -127,13 +127,14 @@ const Footer: React.FC = () => {
               >
                 Location
               </h3>
+              <Link href="https://maps.app.goo.gl/HiAQEj7vkV2rfM4i9">
               <Image
                 src="/FCRIT.png"
                 alt="location"
                 width={300}
                 height={250}
                 className="object-contain w-full max-w-[250px] md:max-w-[300px]"
-              />
+              /></Link>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-2 justify-center w-full md:ml-auto md:mr-auto mt-2">
                 <Image
                   src="/LocationIcon.jpg"

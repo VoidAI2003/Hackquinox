@@ -21,7 +21,7 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
   shimmerWidth = 100,
 }) => {
   return (
-    <p
+    <div
       style={{
         // Define the custom property for shimmer width
         "--shiny-width": `${shimmerWidth}px`,
@@ -45,7 +45,7 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
       )}
     >
       {children}
-    </p>
+    </div>
   );
 };
 

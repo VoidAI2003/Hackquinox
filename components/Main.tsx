@@ -16,10 +16,10 @@ const Main = () => {
             </div>
 
             {/* Main Content */}
-            <div className="w-auto mx-auto mt-[5rem] sm:mt-[6rem] md:mt-[7rem] lg:mt-[8rem] rounded-md h-auto overflow-hidden px-4">
+            <div className="w-auto mx-auto mt-[5rem] sm:mt-[4rem] md:mt-[5rem] lg:mt-[6rem] rounded-md h-auto overflow-hidden px-4">
                 <Vortex
                     backgroundColor="inherit"
-                    className="flex flex-col items-center justify-center px-2 md:px-10 py-6 w-full h-full"
+                    className="flex flex-col items-center justify-center px-2 md:px-10 py-3 w-full h-full"
                     rangeY={800}
                     particleCount={1000}
                 >
@@ -60,7 +60,8 @@ const Main = () => {
                             HackQuinox
                         </h1>
                         <h1
-                            className="text-lg sm:text-xl md:text-2xl lg:text-4xl self-start -mt-2 sm:-mt-4 md:-mt-6 lg:-mt-8 xl:-mt-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white text-center"
+                            className="text-lg sm:text-xl md:text-2xl lg:text-4xl self-start -mt-2 sm:-mt-4 md:-mt-6 lg:-mt-8 xl:-mt-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800
+                             via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white text-center"
                             style={{ fontFamily: 'var(--font-orbitron)' }}
                         >
                             2025
