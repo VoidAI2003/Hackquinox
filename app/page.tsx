@@ -7,7 +7,6 @@ import {Prizes} from "@/components/Prizes";
 import ScheduleCard from "@/components/schedule";
 import PS from "@/components/theme2";
 
-
 export default function Home() {
   
   return (<>

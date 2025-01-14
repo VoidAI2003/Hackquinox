@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import "./faq.css";
@@ -84,11 +83,11 @@ export default function Faq() {
 
   return (
     <>
-    <LampHeader
+    <LampHeader 
       text="Frequntly Asked Questions"
     lampColor="#ff007f"
     />
-    <div className="min-h-screen w-full px-4 sm:px-6 lg:px-8 ">
+    <div id="faq-section" className="min-h-screen w-full px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto py-8 sm:py-12">
         {/* FAQ Section */}
         <div className="w-full rounded-xl border border-pink-500/20 mt-12 sm:mt-24 p-4 sm:p-8">

@@ -10,9 +10,14 @@
 
 
 body {
-  background-color: black; /* Set background to black */
-  color: white; /* Set text color to white */
+  background-color: black; /* Retain black background */
+  color: white; 
+
+  margin: 0;
+  padding: 0;/* Retain white text */
 }
+
+
 
 .glow-on-hover {
   transition: text-shadow 1s ease-in-out;

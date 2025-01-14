@@ -9,7 +9,7 @@ const ScheduleCard = () => {
       text="Timeline"
       lampColor="#ECB86A"
     />
-    <div className="bg-darkBackground text-lightText min-h-screen relative flex items-center justify-center">
+  <div id="schedule-section" className="bg-darkBackground text-lightText min-h-screen relative flex items-center justify-center">
       <div className="bg-animation absolute inset-0 overflow-hidden">
         <div id="stars" className="relative"></div>
         <div id="stars2" className="relative"></div>
