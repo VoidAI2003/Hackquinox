@@ -20,7 +20,14 @@ body {
    0 0 15px #FF9ACD;
   transition: text-shadow 0.3s ease-in-out;
 }
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
 
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
 .neon-glow:hover {
   text-shadow: 0 0 5px #E6F2FF, 0 0 10px #8B79D9, 0 0 15px #6411AD;
 }
