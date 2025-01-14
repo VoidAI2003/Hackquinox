@@ -128,31 +128,32 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
   };
   
   return (
-    <div className="flex flex-col items-center gap-8 w-full min-h-screen py-12 bg-[#00050C]">
-      {/* Current Domain */}
-      <div className="w-full flex flex-col items-center gap-8 mt-12">
-        <div className="title-container">
-          <h2 className={`${orbitron.className} text-[48px] font-bold text-white text-center`}>
-            {domains[currentDomainIndex].domain}
-          </h2>
-        </div>
-  
-        {/* Problem Statement Cards */}
-        <div className="card-container w-full">
-          {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
-            <div key={problemIndex} className="card">
-              <div className="absolute z-10 p-4 text-center">
-                <h3 className={`${orbitron.className} text-[18px] font-bold text-white`}>{problem.title}</h3>
-                <p
-                  className={`${montserrat.className} text-[14px] text-gray-300 mt-2`}
-                  style={{ whiteSpace: 'pre-line', textAlign: 'left' }}
-                  dangerouslySetInnerHTML={{ __html: problem.description }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="flex flex-col items-center gap-4 md:gap-8 w-full min-h-screen py-6 md:py-12 bg-[#00050C] px-4 md:px-8">
+    <div className="w-full flex flex-col items-center gap-4 md:gap-8 mt-8 md:mt-12">
+      <div className="title-container w-full">
+        <h2 className={`${orbitron.className} text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center`}>
+          {domains[currentDomainIndex].domain}
+        </h2>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-7xl">
+        {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
+          <div key={problemIndex} className="relative bg-gradient-to-br from-pink-500 to-cyan-500 p-0.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+            <div className="bg-[#181818] rounded-2xl p-4 md:p-6 h-full">
+              <h3 className={`${orbitron.className} text-base md:text-lg lg:text-xl font-bold text-white mb-3`}>
+                {problem.title}
+              </h3>
+              <div
+                className={`${montserrat.className} text-sm md:text-base text-gray-300 space-y-2`}
+                style={{ whiteSpace: 'pre-line' }}
+                dangerouslySetInnerHTML={{ __html: problem.description }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
   
       {/* Navigation Buttons */}
       <div className="flex justify-center gap-4 mt-8">

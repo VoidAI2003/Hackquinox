@@ -15,9 +15,7 @@ type SocialLinkType = {
 
 const Footer: React.FC = () => {
   const links: FooterLinkType[] = [
-    { label: "Code of Conduct", href: "" },
     { label: "FAQs", href: "" },
-    { label: "Meet the Team", href: "" },
     { label: "Timeline", href: "" },
   ];
 
