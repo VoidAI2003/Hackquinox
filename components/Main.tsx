@@ -52,29 +52,42 @@ const Main = () => {
                     </div>
 
                     {/* Main Heading */}
-                    <div className="relative grid grid-cols-[auto,auto] items-start justify-center gap-x-2 max-w-7xl mx-auto mt-6 z-20 py-6">
-                        <h1
-                            className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white text-center"
-                            style={{ fontFamily: 'var(--font-orbitron)' }}
-                        >
-                            HackQuinox
-                        </h1>
-                        <h1
-                            className="text-lg sm:text-xl md:text-2xl lg:text-4xl self-start -mt-2 sm:-mt-4 md:-mt-6 lg:-mt-8 xl:-mt-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800
-                             via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white text-center"
-                            style={{ fontFamily: 'var(--font-orbitron)' }}
-                        >
-                            2025
-                        </h1>
-                    </div>
+                    <div className="flex flex-col items-center justify-center max-w-7xl mx-auto mt-6 z-20 py-6 px-4">
+      <div className="relative flex items-baseline gap-2">
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
+                     bg-clip-text text-transparent bg-gradient-to-b 
+                     from-neutral-800 via-neutral-700 to-neutral-700 
+                     dark:from-neutral-800 dark:via-white dark:to-white 
+                     tracking-wider"
+          style={{ fontFamily: 'var(--font-orbitron)' }}
+        >
+          HackQuinox
+        </h1>
+        <span
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 
+                     bg-clip-text text-transparent bg-gradient-to-b 
+                     from-neutral-800 via-neutral-700 to-neutral-700 
+                     dark:from-neutral-800 dark:via-white dark:to-white
+                     self-start"
+          style={{ fontFamily: 'var(--font-orbitron)' }}
+        >
+          2025
+        </span>
+      </div>
+    </div>
 
                     {/* Text Effect */}
-                    <h2
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center py-4"
-                        style={{ fontFamily: 'var(--font-exo2)' }}
-                    >
-                        <TextGenerateEffect words={text} />
-                    </h2>
+                    <h2 
+      className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+                 text-center py-2 sm:py-3 md:py-4
+                 tracking-wide leading-relaxed
+                 px-4 mx-auto
+                 max-w-screen-lg"
+      style={{ fontFamily: 'var(--font-exo2)' }}
+    >
+      <TextGenerateEffect words={text} />
+    </h2>
 
                     {/* Bottom Content */}
                     <MainBottom />
