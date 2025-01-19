@@ -1,17 +1,17 @@
-'use client';  
+'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Orbitron, Montserrat } from 'next/font/google';
 import './pscards.css';
-import './ps-button.css'
+import './ps-button.css';
 
 const orbitron = Orbitron({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export default function PS() {
-  const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
+  const [currentDomainIndex, setCurrentDomainIndex] = useState<number>(0);
 
-  // Data structure for domains and their problem statements
+  // Data structure for domains and their problems
   const domains = [
     {
       domain: "WEB DEV",
@@ -77,6 +77,18 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 <strong>API:</strong> OpenAQ`
           ,
         },
+        {
+          title: "3. Early Detection of Learning Disabilities Cause",
+          description: `Learning disabilities, such as dyslexia, often go undetected in early stages due to subtle symptoms and a lack of accessible tools for monitoring and analysis.
+        \n<strong>Challenge for Participants:</strong>
+        Develop an AI-based system to analyze patterns in student performance, focusing on the early detection of a <strong>specific learning disability</strong> (e.g., dyslexia). 
+        The system will classify potential cases using basic machine learning models and provide actionable <strong>insights</strong> through visual reports for educators. 
+        The system aims to support <strong>early intervention</strong> strategies by simulating data-driven scenarios.
+        <strong>Expected System:</strong> 
+        • A machine learning-based classifier trained on simulated or anonymized data to detect patterns indicative of a specific learning disability.
+        `
+          ,
+        },
       ],
     },
     {
@@ -116,42 +128,75 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
     },
   ];
 
+  // Initialize domain index from localStorage or default to 0
+  useEffect(() => {
+    const storedDomainIndex = localStorage.getItem('domainIndex');
+    if (storedDomainIndex) {
+      setCurrentDomainIndex(Number(storedDomainIndex));
+    }
+  }, []);
+
+  // Store the domain index to localStorage when it changes
+  useEffect(() => {
+    localStorage.setItem('domainIndex', currentDomainIndex.toString());
+    history.pushState({ domainIndex: currentDomainIndex }, '', window.location.href); // Update history state
+  }, [currentDomainIndex]);
+
+  // Handle 'Next' and 'Previous' button click
   const handleNext = () => {
     setCurrentDomainIndex((prevIndex) => (prevIndex + 1) % domains.length);
   };
-  
+
   const handlePrev = () => {
     setCurrentDomainIndex((prevIndex) => (prevIndex - 1 + domains.length) % domains.length);
   };
 
   const handleBackToMain = () => {
-    window.location.href = '/'; // Replace with your main app route
+    window.location.href = '/'; // Go to the homepage explicitly
   };
-  
+
+  // Handle browser back and forward button (popstate)
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      // Check if there's a state to navigate to
+      if (event.state?.domainIndex !== undefined) {
+        setCurrentDomainIndex(event.state.domainIndex);
+      } else {
+        window.location.href = '/'; // Go to the homepage if it's an invalid state
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
   return (
     <div className="relative flex flex-col items-center gap-4 md:gap-8 w-full min-h-screen py-6 md:py-12 bg-[#00050C] px-4 md:px-8">
       {/* Navigation Header */}
       <div className="w-full flex justify-between items-center mb-4">
         <div className="button-borders">
-          <button 
-            className="primary-button"
-            onClick={handleBackToMain}
-          >
+          <button className="primary-button" onClick={handleBackToMain}>
             Back
           </button>
         </div>
       </div>
-
+  
       <div className="w-full flex flex-col items-center gap-4 md:gap-8">
         <div className="title-container w-full">
           <h2 className={`${orbitron.className} text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center`}>
-            {domains[currentDomainIndex].domain}
+            {domains[currentDomainIndex]?.domain || "Domain not found"}
           </h2>
         </div>
-
+  
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-7xl">
-          {domains[currentDomainIndex].problems.map((problem, problemIndex) => (
-            <div key={problemIndex} className="relative bg-gradient-to-br from-pink-500 to-cyan-500 p-0.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+          {domains[currentDomainIndex]?.problems?.map((problem, problemIndex) => (
+            <div
+              key={problemIndex}
+              className="relative bg-gradient-to-br from-pink-500 to-cyan-500 p-0.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20"
+            >
               <div className="bg-[#181818] rounded-2xl p-4 md:p-6 h-full">
                 <h3 className={`${orbitron.className} text-base md:text-lg lg:text-xl font-bold text-white mb-3`}>
                   {problem.title}
@@ -166,7 +211,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
           ))}
         </div>
       </div>
-
+  
       {/* Navigation Buttons */}
       <div className="flex justify-center gap-4 mt-8">
         <div className="button-borders">
@@ -182,4 +227,4 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
       </div>
     </div>
   );
-}
+};
