@@ -157,10 +157,10 @@ const ScheduleCard = () => {
               />
               
               <p className="absolute top-[510px] left-[425px] text-white font-Orbitron font-bold text-[28px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
-                1 February<br />
-                10 hour offline<br />
-                coding round
-              </p>
+              <span>11:00 PM</span> <br />
+                <span>1 February</span> <br />
+                <span>Results Declared</span>
+                </p>
               
               <img
                 src="/rocketr.png"
@@ -178,12 +178,13 @@ const ScheduleCard = () => {
                 className="absolute top-[350px] left-[625px] transition-transform duration-300 hover:scale-110"
               />
               
-              <p className="absolute top-[510px] left-[870px] text-white font-Orbitron font-bold text-[28px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
-                <span>11:00 PM</span> <br />
-                <span>1 February</span> <br />
-                <span>Results Declared</span>
+              <p className="absolute top-[500px] left-[870px] text-white font-Orbitron font-bold text-[28px] text-center leading-tight transition-transform duration-300 hover:scale-110 hover:text-pink-light hover:shadow-pink-light">
+              <p>
+                </p>1 February<br />
+                10 hour offline<br />
+                coding round
               </p>
-              
+            
               <img
                 src="/rocketr.png"
                 alt="rocket"
