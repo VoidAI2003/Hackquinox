@@ -6,7 +6,7 @@ import AnimatedShinyText from "./textshineeffect";
 export function About() {
   const text1 =
     "Welcome to HackQuinox 2025, an offline hackathon hosted by Agnel Charities Fr. C. Rodrigues Institute of Technology, Navi Mumbai, in collaboration with CSI-FCRIT and the AI & Deep Learning Club.  ";
-  const text2 = "HackQuinox is a vibrant platform for students to unleash creativity, tackle real-world challenges, and present innovative solutions. With domains like AI/ML, Web Development, Cybersecurity/Blockchain, and Open Innovation, participants will collaborate, innovate, and learn from industry experts.";
+  const text2 = "HackQuinox is a vibrant platform for students to unleash creativity, tackle real-world challenges, and present innovative solutions. With domains like AI/ML, Web Development, Cybersecurity / Blockchain, and Open Innovation, participants will collaborate, innovate, and learn from industry experts.";
   const text3 ="Whether you're a seasoned coder or a budding innovator, HackQuinox 2025 is your chance to push boundaries, connect with peers, and create impactful projects. Let's code, create, and collaborate!";
   
   return (
