@@ -149,6 +149,8 @@ const Navbar = () => {
                   ))}
                   <Link 
                     href="https://unstop.com/p/hackquinox-2025-fr-c-rodrigues-institute-of-technology-fcrit-navi-mumbai-1361395"
+                    target="_blank"
+                     rel="noopener noreferrer"
                     onClick={closeSidebar}
                     className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-red-500 text-white rounded-lg text-center"
                   >
