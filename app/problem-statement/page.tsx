@@ -18,18 +18,20 @@ export default function PS() {
       problems: [
         {
           title: "1. Local Farmer's Market Finder",
-          description: `Local Farmer's Market Finder is a web or mobile application designed to bridge the gap between consumers and local farmers' markets. 
+          description: ` Consumers often struggle to locate nearby farmers' markets
+ and access information about available produce, pricing, and
+ vendor details. This problem statement highlights the need for
+ a web or mobile application that connects consumers with local
+ farmers' markets, enabling them to discover nearby markets,
+ explore fresh, locally-sourced produce, track product availability
+ and prices, and support sustainable consumption. 
           \n<strong>Key Features:</strong>
-          - <strong>Market Search:</strong> Find nearby markets by location or produce type.
-          - <strong>Produce Listings:</strong> View available products and prices.
-          - <strong>Vendor Tracking:</strong> Favorite vendors and get stock updates.
-          - <strong>Interactive Map:</strong> Locate markets with directions.
+          - <strong>Market Search:</strong> Enables users to find nearby markets based on location or produce type, ensuring they can easily discover relevant markets.
+          - <strong>Produce Listings:</strong> Allows users to view available products and prices, helping them plan their purchases and budget effectively.
+          - <strong> Interactive Map:</strong> Provides users with directions to markets, ensuring they can easily locate them.
           - <strong>User Reviews:</strong> Rate and review vendors and markets.
-          - <strong>Seasonal Calendar:</strong> Track seasonal produce availability.
           - <strong>Pre-ordering:</strong> Order products for pickup.
-          - <strong>Event Updates:</strong> See special events at markets.
-          - <strong>Responsive Design:</strong> Optimized for mobile and desktop.
-          - <strong>Sustainability Info:</strong> Learn about eco-friendly vendor practices.`,
+          - <strong>Market/Vendor Tracking:</strong> Allows users to favorite markets/vendors and receive stock updates, ensuring they don’t miss out on desired products`,
         },
         {
           title: "2. Centralized Alumni Engagement Platform ",
@@ -39,11 +41,7 @@ export default function PS() {
           • Authentication via email or LinkedIn OAuth.
           • Event calendar with RSVP functionality. 
           • Job board for postings and applications. 
-          • Mentorship program with scheduling. 
-          \n<strong>Tech Stack:</strong> React.js, Node.js, MongoDB 
-          \n<strong>Resources:</strong> 
-          1. Guide on authentication with Node.js and JWT. 
-          2. React calendar integration tutorial `
+          • Mentorship program with scheduling. `
           ,
         },
       ],
@@ -65,16 +63,15 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
         },
         {
           title: "2. AI for Air Pollution Forecasting",
-          description: `Develop a web-based AI tool that forecasts air quality levels using meteorological and pollution data, provides real-time AQI updates, and offers actionable recommendations to reduce pollution. The tool will empower users with insights to mitigate health risks and improve air quality awareness.
+          description: ` Rising pollution levels and limited access to real-time air quality data make it challenging for individuals to take proactive measures to protect their health and the environment. The problem statement highlights the need to create a web-based AI tool that forecasts air quality levels using meteorological and pollution data, delivers real time AQI updates, and provides actionable recommendations for reducing pollution. The tool will enhance user awareness, help mitigate health risks, and promote environmental sustainability
 \n<strong>Key Features:</strong>
 <strong>Real-Time Air Quality Monitoring:</strong> Display live AQI levels and pollutant breakdown (e.g., PM2.5, NO2).
 <strong>Location-Based Forecasts:</strong> Provide hourly, daily, and weekly air quality predictions for specific regions.
 <strong>Pollution Hotspot Visualization:</strong> Highlight areas with high pollution on an interactive map.
 <strong>Personalized Alerts:</strong> Notify users of hazardous AQI levels with health advisories.
 <strong>Recommendations:</strong> Suggest actions to reduce pollution (e.g., using public transport) and protect health (e.g., using masks).
-<strong>Historical Trends Analysis:</strong> Show past AQI trends for comparative insights.
-<strong>User-Friendly Dashboard:</strong> Include interactive graphs, heatmaps, and pollutant data visualization
-<strong>API:</strong> OpenAQ`
+<strong>User-Friendly Dashboard:</strong> Include interactive graphs, heatmaps, and pollutant data visualization`
+
           ,
         },
         {
@@ -96,18 +93,14 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
       problems: [
         {
           title: "1. Secure Voting System on Blockchain ",
-          description: `<strong>Cause:</strong> Traditional voting methods are prone to tampering and fraud. 
+          description: `Traditional voting methods are prone to tampering and fraud, often leading to disputes and undermining public trust in the electoral process. They also face challenges like logistical inefficiencies, high costs, and limited accessibility for certain populations. The problem statement highlights the need to develop a blockchain-based voting system ensuring voter anonymity and tamper-proof results.
 \n<strong>Description:</strong> Develop a blockchain-based voting system ensuring voter anonymity and tamper-proof results. 
-\n<strong>Expected System:</strong> 
+\n<strong> Key features:</strong> 
 • Authentication with unique voter IDs. 
 • Smart contracts to record and validate votes. 
 • Real-time results dashboard. 
 • Transparent public ledger. 
-\n<strong>Tech Stack:</strong> \nEthereum, Solidity, Node.js, React.js. 
-\n<strong>Resources:</strong> 
-1. Solidity smart contract documentation. 
-2. Ethereum development guide. 
-3. Blockchain and voting use case studies.` 
+` 
           ,
         },
         {
@@ -118,7 +111,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 • Rule-based detection for phishing traits. 
 • Dashboard displaying flagged emails. 
 • Alerts for users. 
-\n<strong>Tech Stack:</strong> \nPython, Flask, Scikit-learn. Resources: 
+Resources: 
 1. Python email parsing library documentation. 
 2. Scikit-learn for text classification. 
 3. Phishing prevention guide by OWASP`
