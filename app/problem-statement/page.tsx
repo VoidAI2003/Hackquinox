@@ -29,9 +29,9 @@ export default function PS() {
           - <strong>Market Search:</strong> Enables users to find nearby markets based on location or produce type, ensuring they can easily discover relevant markets.
           - <strong>Produce Listings:</strong> Allows users to view available products and prices, helping them plan their purchases and budget effectively.
           - <strong> Interactive Map:</strong> Provides users with directions to markets, ensuring they can easily locate them.
-          - <strong>User Reviews:</strong> Rate and review vendors and markets.
+          - <strong>User Reviews:</strong> Rate and review markets.
           - <strong>Pre-ordering:</strong> Order products for pickup.
-          - <strong>Market/Vendor Tracking:</strong> Allows users to favorite markets/vendors and receive stock updates, ensuring they don’t miss out on desired products`,
+          - <strong>Market / Vendor Tracking:</strong> Allows users to favorite markets / vendors and receive stock updates, ensuring they don’t miss out on desired products`,
         },
         {
           title: "2. Centralized Alumni Engagement Platform ",
