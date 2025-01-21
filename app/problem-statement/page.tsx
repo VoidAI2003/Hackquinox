@@ -111,10 +111,7 @@ Design an AI-powered prototype of a platform to help students like Vivek identif
 • Rule-based detection for phishing traits. 
 • Dashboard displaying flagged emails. 
 • Alerts for users. 
-Resources: 
-1. Python email parsing library documentation. 
-2. Scikit-learn for text classification. 
-3. Phishing prevention guide by OWASP`
+`
           ,
         },
       ],
