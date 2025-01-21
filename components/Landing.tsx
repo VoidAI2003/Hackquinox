@@ -72,7 +72,10 @@ const Navbar = () => {
                 </HoverBorderGradient>
               </Link>
             ))}
-            <Link href="https://unstop.com/p/hackquinox-2025-fr-c-rodrigues-institute-of-technology-fcrit-navi-mumbai-1361395">
+            <Link href="https://unstop.com/p/hackquinox-2025-fr-c-rodrigues-institute-of-technology-fcrit-navi-mumbai-1361395"
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <HoverBorderGradient2
                 containerClassName="rounded-full h-full"
                 className="dark:bg-black bg-white text-black dark:text-white 
