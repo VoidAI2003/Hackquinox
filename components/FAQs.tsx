@@ -79,7 +79,7 @@ export default function Faq() {
     },
     {
       question: "Is there a registration fee?",
-      answer: "The first round (idea submission) is free for all. If your idea get selected, a ₹400 fee per team is required for the 10-hour offline coding round."
+      answer: "The first round (idea submission) is free for all. If your idea get selected, a ₹200 fee per team is required for the 10-hour offline coding round."
     },
     {
       question: "Will there be any prizes?",
