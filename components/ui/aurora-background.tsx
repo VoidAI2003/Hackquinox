@@ -232,9 +232,9 @@ const PrizeRevealCard: React.FC = () => {
   const hasTriggeredConfetti = useRef<boolean>(false);
 
   const prizeData: PrizeData[] = [
-    { position: "Winner", value: "₹15,000" },
-    { position: "First Runner Up", value: "₹10,000" },
-    { position: "Second Runner Up", value: "₹5,000" }
+    { position: "Winner", value: "₹15,000 + goodies worth 7,000 + internship opportunity with CIBA at FCRIT in Navi Mumbai, India" },
+    { position: "First Runner Up", value: "₹10,000 + goodies worth 7,000" },
+    { position: "Second Runner Up", value: "₹5,000 + goodies worth 7,000" }
   ];
 
   const handleReveal = () => {
@@ -286,7 +286,7 @@ const PrizeRevealCard: React.FC = () => {
             >
               <h3 className="text-4xl font-bold text-center mb-12 text-transparent bg-gradient-to-r 
                            from-orange-400 via-purple-400 to-blue-400 bg-clip-text">
-                Prizes Worth ₹30,000
+                Prizes Worth ₹50,000 (inclusive of goodies)
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {prizeData.map((prize, index) => (
